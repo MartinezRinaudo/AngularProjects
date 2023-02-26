@@ -23,7 +23,7 @@ export class ItemsListComponent implements OnInit {
     });
   }
 
-  onSelect(itemId:any):void {
-    console.log(itemId.target.value);
+  onSelect(item:ItemEntity):void {
+    console.log(item);
   }
 }
