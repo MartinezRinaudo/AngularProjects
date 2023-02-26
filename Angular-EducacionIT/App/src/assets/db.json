@@ -1,0 +1,53 @@
+{
+    "items":[
+        {
+            "id":1,
+            "name":"Zapatillas",
+            "description":"Adidas",
+            "price":18000,
+            "stock":true
+        },
+        {
+            "id":2,
+            "name":"Zapatillas",
+            "description":"Nike",
+            "price":29000,
+            "stock":false
+        },
+        {
+            "id":3,
+            "name":"Zapatillas",
+            "description":"Puma",
+            "price":12000,
+            "stock":true
+        },
+        {
+            "id":4,
+            "name":"Zapatillas",
+            "description":"Topper",
+            "price":17000,
+            "stock":false
+        },
+        {
+            "id":5,
+            "name":"Zapatillas",
+            "description":"John Foos",
+            "price":18000,
+            "stock":true
+        },
+        {
+            "id":6,
+            "name":"Zapatillas",
+            "description":"DC Shoes",
+            "price":25000,
+            "stock":false
+        },
+        {
+            "id":7,
+            "name":"Zapatillas",
+            "description":"Vans",
+            "price":26500,
+            "stock":true
+        } 
+    ]
+}
