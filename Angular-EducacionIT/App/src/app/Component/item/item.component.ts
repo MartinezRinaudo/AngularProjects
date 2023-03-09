@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ItemEntity } from 'src/app/Entity/item-entity';
+import { ItemService } from 'src/app/Service/item.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-item',
@@ -8,20 +10,17 @@ import { ItemEntity } from 'src/app/Entity/item-entity';
 })
 export class ItemComponent implements OnInit {
 
-  @Input()
-  item:ItemEntity = { 
-    id:1,
-    name:"Zapatillas",
-    description:"Adidas",
-    price:18000,
-    stock:true
-  };
+  public id:number;
+  public item:ItemEntity;
 
-  constructor(){}
+  constructor(private itemService:ItemService, private route:ActivatedRoute){
+}
 
   ngOnInit(): void {
-    
+    this.id=Number(this.route.snapshot.paramMap.get('id'));
+    this.itemService.getItemById(this.id).subscribe((data)=> {
+        this.item = data;
+        console.log(this.item)
+    });
   }
-
-
 }
