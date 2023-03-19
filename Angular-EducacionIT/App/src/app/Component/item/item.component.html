@@ -1,0 +1,49 @@
+<br>
+<div class="card col-md-12" *ngIf="item">
+  <div class="card-header">
+    <fa-icon class="d-flex justify-content-end" [icon]="close" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="confirmationBtn(close)"></fa-icon>   
+    <h3 class="card-title text-center me-auto p-2">{{item.name}}</h3> 
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img [src]="item.image" [alt]="item.branch" class="card-img-top">
+      </div>
+      <div class="col-md-8">
+        <p class="card-text text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quas quidem odit? Excepturi voluptatem facilis eligendi minus, doloribus reiciendis! Recusandae incidunt omnis eum voluptates at dicta eligendi accusamus iste accusantium.</p>
+        <br>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+        <br>
+        <p class="card-text text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quas quidem odit? Excepturi voluptatem facilis eligendi minus, doloribus reiciendis! Recusandae incidunt omnis eum voluptates at dicta eligendi accusamus iste accusantium.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="d-flex mb-3">
+      <h4 class="me-auto p-2">Sponsored by <i>{{item.branch}}</i></h4>
+      <fa-icon class="p-2" [icon]="edit" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="confirmationBtn(edit)"></fa-icon>
+      <fa-icon class="p-2" [icon]="deleteItem"></fa-icon>
+    </div>     
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>{{confirmationQuestion}}</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal" routerLink="{{routeToSend}}">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>

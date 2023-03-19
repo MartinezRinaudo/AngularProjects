@@ -1,0 +1,31 @@
+<div class="row d-flex justify-content-center m-5">
+    <h1 class="header title text-center">Home</h1>
+    <h2 class="header subtitle">Subtitle</h2>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo dolor nam illum, facilis qui eos enim quos reiciendis repellat quisquam quibusdam perspiciatis animi rem corrupti, fugiat architecto, neque libero dolores.</p>
+    <br>
+    <div class="row">
+     <div class="col col-md-2"></div>
+     <div id="carouselControls" class="carousel carousel-dark slide col col-md-8" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/images/adidas-image.jpg" class="d-block w-100" alt="Adidas">
+            </div>
+            <div class="carousel-item" *ngFor="let item of items">
+                <img [src]="item.image" class="d-block w-100" [alt]="item.name">
+            </div>  
+        </div>
+           <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Anterior</span>
+           </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        <div class="col col-md-2"></div>
+    </div>
+    <h4>Description</h4>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod alias voluptates deserunt commodi doloremque! Voluptatum dignissimos esse sapiente vel soluta. Dolore nihil facere hic, voluptatum praesentium totam aspernatur omnis cum!</p>
+</div>

@@ -1,0 +1,40 @@
+
+<div class="card row d-flex justify-content-center m-5">
+    <div class="card-header">
+        <h2 class="card-title">Items</h2>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table-light text-center">
+            <table class="table table-bordered table-hover table-striped align-middle">
+                <thead class="table-light">
+                    <tr scope="row">
+                        <th scope="col">ID</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Detalles</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of items">
+                        <tr scope="row" (itemDetails)="item">
+                        <th>{{item.id}}</th>
+                        <td><img [src]="item.image" [alt]="item.branch" style="width:100px; height:100px" class="img-thumbnail img-sm rounded"></td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.branch}}</td>
+                        <td>{{item.price}}</td>
+                        <td>
+                            <div *ngIf="item.stock">Disponible</div>
+                            <div *ngIf="!item.stock">No Disponible</div>
+                        </td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" (click)="onSelect(item)"routerLink='/articulos/{{item.id}}'>Ver Detalles</button>
+                        </td>           
+                    </tr>
+                </tbody>
+            </table>    
+        </div>
+    </div>
+</div>
+

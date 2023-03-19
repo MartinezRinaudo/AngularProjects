@@ -1,0 +1,58 @@
+    <div class="card border border-opacity-25 m-5">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5" *ngIf="item">
+                    <img [src]="item.image" class="img-fluid rounded-start" style="width: auto;" [alt]="item.branch">
+                </div>
+                <div class="col-md-7">
+                    <form #itemForm="ngForm" (ngSubmit)="Save(itemForm)" class="p-4 text-secondary" *ngIf="item" >
+                <fieldset>
+                    <legend>
+                        <h4 class="title text-center">Editar artículo:</h4>
+                        <hr>
+                    </legend>
+                    <div class="form-group row mb-3">
+                        <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" required [(ngModel)]="item.name" name="name" #name="ngModel">
+                            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">El nombre es obligatorio</div>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="branch" class="col-sm-2 col-form-label">Marca:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="branch" required [(ngModel)]="item.branch" name="branch">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="price" class="col-sm-2 col-form-label">Precio:</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="price" required [(ngModel)]="item.price" name="price">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="image" class="col-sm-2 col-form-label">Imagen:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="file" id="image" name="image" [(ngModel)]="item.image">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="stock" class="col-form-label">Disponibilidad:</label>
+                        <div class="form-check">
+                            <div class="d-flex justify-content-center text-center border border-opacity-25 p-1">
+                                <input class="form-check-input m-1" type="checkbox" id="stock" checked [(ngModel)]="item.stock" name="stock">
+                                <label class="form-check-label" for="stock">Disponible</label>
+                            </div>
+                        </div>
+                    </div> 
+                    <hr>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-success m-1" type="submit" id="save">Guardar</button>
+                        <button class="btn btn-light m-1" routerLink="/articulos">Cancelar</button>
+                    </div>
+                </fieldset>        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

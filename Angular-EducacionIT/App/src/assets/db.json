@@ -1,0 +1,60 @@
+{
+    "items":[
+        {
+            "id":1,
+            "name":"YEEZY BOOST 350",
+            "branch":"Adidas",
+            "price":18000,
+            "stock":true,
+            "image":"./assets/images/adidas-image.jpg"      
+          },
+        {
+            "id":2,
+            "name":"AIR FORCE I",
+            "branch":"Nike",
+            "price":29000,
+            "stock":false,
+            "image":"./assets/images/nike-image.jpg"
+        },
+        {
+            "id":3,
+            "name":"TRC BLAZE TECH",
+            "branch":"Puma",
+            "price":12000,
+            "stock":true,
+            "image":"./assets/images/puma-image.jpg"
+        },
+        {
+            "id":4,
+            "name":"CAPITAN TT",
+            "branch":"Topper",
+            "price":17000,
+            "stock":false,
+            "image":"./assets/images/topper-image.jpg"
+        },
+        {
+            "id":5,
+            "name":"182 NEGRO",
+            "branch":"John Foos",
+            "price":18000,
+            "stock":true,
+            "image":"./assets/images/jf-image.jpg"        
+        },
+        {
+            "id":6,
+            "name":"TONIK TX",
+            "branch":"DC Shoes",
+            "price":25000,
+            "stock":false,
+            "image":"./assets/images/dc-image.jpg"
+        },
+        {
+            "id":7,
+            "name":"U OLD SKOOLS",
+            "branch":"Vans",
+            "price":26500,
+            "stock":true,
+            "image":"./assets/images/vans-image.jpg"        
+        }
+    ]
+}
